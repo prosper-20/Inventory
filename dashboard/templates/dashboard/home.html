@@ -15,7 +15,7 @@
                         type: 'pie',
                         data: {
                             labels: [{% for product in product %} '{{product.name}}', {% endfor %}],
-                        datasets: [{
+                    datasets: [{
                         label: 'Number of Products',
                         data: [{% for product in product %} {{ product.quantity }}, {% endfor %}],
                         backgroundColor: [
