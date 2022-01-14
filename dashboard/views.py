@@ -5,3 +5,9 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'dashboard/home.html')
+
+def order(request):
+    return render(request, 'dashboard/order.html')
+
+def products(request):
+    return render(request, 'dashboard/products.html')
