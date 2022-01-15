@@ -1,4 +1,6 @@
+from email import contentmanager
 from django.shortcuts import render
+from .models import Product
 
 # Create your views here.
 
@@ -10,4 +12,8 @@ def order(request):
     return render(request, 'dashboard/order.html')
 
 def products(request):
-    return render(request, 'dashboard/products.html')
+    products = Product.objects.all()
+    context = {
+        'products': products,
+    }
+    return render(request, 'dashboard/products.html', context)

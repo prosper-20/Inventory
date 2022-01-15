@@ -34,16 +34,16 @@
                 </tr>
             </thead>
             <tbody>
-                {% for product in product %}
+                {% for product in products %}
                 <tr>
                     <td>{{ product.name }}</td>
                     <td>{{ product.category }}</td>
                     <td>{{ product.quantity }}</td>
                     <td>
                         <a class="btn btn-info btn-sm mr-2"
-                            href="{% url 'dashboard-products-edit' product.id %}">Edit</a>
+                            href="">Edit</a>
                         <a class="btn btn-danger btn-sm ml-2"
-                            href="{% url 'dashboard-products-delete' product.id %}">Delete</a>
+                            href="">Delete</a>
                     </td>
                 </tr>
                 {% endfor %}
