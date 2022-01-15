@@ -30,4 +30,4 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.product} ordered by {self.staff.username}'
+        return f' {self.order_quantity} units of {self.product} ordered by {self.staff.username}'
