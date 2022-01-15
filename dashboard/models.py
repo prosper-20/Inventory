@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 CATEGORY = (
-    ('T', 'Toiletries'),
-    ('S', 'Stationary'),
-    ('E', 'Electronics'),
-    ('F', 'Food'),
-    ('HS', 'Household')
+    ('Toiletries', 'Toiletries'),
+    ('Stationary', 'Stationary'),
+    ('Electronics', 'Electronics'),
+    ('Food', 'Food'),
+    ('Household', 'Household')
 )
 
 
