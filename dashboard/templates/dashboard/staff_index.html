@@ -31,7 +31,7 @@
                         </thead>
                         <tbody>
                             {% for order in order %}
-                            {% if order.customer == user %}
+                            {% if order.staff.id == user.id %}
                             <tr>
                                 <td>{{ order.name }}</td>
                                 <td>{{ order.name.category }}</td>
