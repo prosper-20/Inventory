@@ -49,7 +49,7 @@
                         {% endif %}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Logout</a>
+                        <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
                     </li>
                 </ul>
 
@@ -119,6 +119,7 @@
     </div>
     <!--End Topside-->
 
+    {% if request.user.is_authenticated and request.user.is_staff and request.user.is_superuser %}
     <!--Graphs-->
     <div class="container">
         <div class="row my-5">
@@ -213,6 +214,9 @@
         </div>
     </div>
     <!--End Graphs-->
+    {% else %}
+    {% include 'dashboard/staff_index.html '%}
+    {% endif %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 

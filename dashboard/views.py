@@ -1,13 +1,15 @@
 from email import contentmanager
 from django.shortcuts import render
 from .models import Product
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-
+@login_required(login_url='login')
 def home(request):
     return render(request, 'dashboard/home.html')
 
+@login_required(login_url='login')
 def order(request):
     return render(request, 'dashboard/order.html')
 
