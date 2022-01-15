@@ -43,8 +43,10 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="profile.html">Admin Profile <span
+                        {% if request.user.is_authenticated %}
+                        <a class="nav-link text-white" href="profile.html">{{user.username }}'s Profile<span
                                 class="sr-only">(current)</span></a>
+                        {% endif %}
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Logout</a>
