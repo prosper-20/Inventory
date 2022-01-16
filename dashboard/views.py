@@ -12,7 +12,11 @@ def home(request):
 
 @login_required(login_url='login')
 def order(request):
-    return render(request, 'dashboard/order.html')
+    order = Order.objects.all()
+    context = {
+        "order": order,
+    }
+    return render(request, 'dashboard/order.html', context)
 
 def products(request):
     products = Product.objects.all()
