@@ -21,4 +21,6 @@ def register(request):
 
     return render(request, 'users/register.html', context)
 
-# Create your views here.
+
+def profile(request):
+    return render(request, "users/profile.html")
