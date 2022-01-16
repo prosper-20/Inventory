@@ -214,8 +214,10 @@
         </div>
     </div>
     <!--End Graphs-->
+    {% elif request.user.is_authenticated and request.user.is_staff %}
+        {% include 'dashboard/staff_index.html '%}
     {% else %}
-    {% include 'dashboard/staff_index.html '%}
+        <h3>You are neither</h3>
     {% endif %}
 
     <!-- Optional JavaScript; choose one of the two! -->

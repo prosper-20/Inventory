@@ -31,10 +31,10 @@
                         </thead>
                         <tbody>
                             {% for order in order %}
-                            {% if order.staff.id == user.id %}
+                            {% if order.staff.is_authenticated  %}
                             <tr>
-                                <td>{{ order.name }}</td>
-                                <td>{{ order.name.category }}</td>
+                                <td>{{ order.product.name }}</td>
+                                <td>{{ order.product.category }}</td>
                                 <td>{{ order.order_quantity }}</td>
                             </tr>
                             {% endif %}
