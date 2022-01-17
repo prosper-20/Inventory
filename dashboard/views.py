@@ -44,7 +44,7 @@ def products(request):
             form.save()
             product_name = form.cleaned_data.get('name')
             messages.success(request, f'{product_name} has been added')
-            return redirect('dashboard-products')
+            return redirect('home')
     else:
         form = ProductForm()
     context = {
